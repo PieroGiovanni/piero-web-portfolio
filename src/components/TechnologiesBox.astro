@@ -1,6 +1,6 @@
 ---
 import ReactIcon from "@/icons/technologies/React.astro";
-import AstroIcon from "@/icons/technologies/Astro.astro";
+import AstroIcon from "@/icons/technologies/AstroIcon.astro";
 import AngularIcon from "@/icons/technologies/Angular.astro";
 import Technology from "./Technology.astro";
 import TypeScript from "../icons/technologies/TypeScript.astro";
@@ -18,25 +18,34 @@ import Prisma from "../icons/technologies/Prisma.astro";
 import Shadcn from "../icons/technologies/Shadcn.astro";
 import URQL from "../icons/technologies/URQL.astro";
 import SQLServer from "../icons/technologies/SQLServer.astro";
+import Docker from "../icons/technologies/Docker.astro";
+import Dokku from "../icons/technologies/Dokku.astro";
+import Firebase from "../icons/technologies/Firebase.astro";
+import Git from "../icons/technologies/Git.astro";
+import GraphQL from "../icons/technologies/GraphQL.astro";
+import MongoDB from "../icons/technologies/MongoDB.astro";
+import MySQL from "../icons/technologies/MySQL.astro";
+import Redis from "../icons/technologies/Redis.astro";
+import Tailwind from "../icons/technologies/Tailwind.astro";
+import GitHub from "../icons/GitHub.astro";
+import Apollo from "../icons/technologies/Apollo.astro";
+import Vercel from "../icons/technologies/Vercel.astro";
 ---
 
 <div
-  class="self-center border-[6px] rounded-xl border-cyan-400 h-[800px] w-[800px] grid grid-cols-6 p-2"
+  class="self-center border-[6px] rounded-xl border-cyan-400 grid grid-cols-6 p-12 gap-12"
 >
   <Technology name="React">
     <ReactIcon />
   </Technology>
-  <Technology name="Angular">
-    <AngularIcon />
+  <Technology name="Next.js">
+    <NextJs />
   </Technology>
   <Technology name="Astro">
     <AstroIcon />
   </Technology>
-  <Technology name="TypeScript">
-    <TypeScript />
-  </Technology>
-  <Technology name="JavaScript">
-    <JavaScript />
+  <Technology name="Angular">
+    <AngularIcon />
   </Technology>
   <Technology name="HTML">
     <HTML />
@@ -44,37 +53,80 @@ import SQLServer from "../icons/technologies/SQLServer.astro";
   <Technology name="CSS">
     <CSS />
   </Technology>
-  <Technology name="Python">
-    <Python />
-  </Technology>
-  <Technology name="C#">
-    <CSharp />
-  </Technology>
   <Technology name="Node.js">
     <NodeJs />
-  </Technology>
-  <Technology name="Next.js">
-    <NextJs />
-  </Technology>
-  <Technology name="Chakra-Ui">
-    <ChakraUi />
   </Technology>
   <Technology name="Express.js">
     <ExpressJs />
   </Technology>
-  <Technology name="PostgreSQL">
-    <PostgreSQL />
+  <Technology name="Apollo">
+    <Apollo />
   </Technology>
   <Technology name="Prisma">
     <Prisma />
   </Technology>
-  <Technology name="shadcn">
-    <Shadcn />
-  </Technology>
   <Technology name="URQL">
     <URQL />
   </Technology>
+  <Technology name="GraphQL">
+    <GraphQL />
+  </Technology>
+  <Technology name="Tailwind CSS">
+    <Tailwind />
+  </Technology>
+  <Technology name="shadcn">
+    <Shadcn />
+  </Technology>
+  <Technology name="Chakra-Ui">
+    <ChakraUi />
+  </Technology>
+  <Technology name="TypeScript">
+    <TypeScript />
+  </Technology>
+  <Technology name="JavaScript">
+    <JavaScript />
+  </Technology>
+
+  <Technology name="C#">
+    <CSharp />
+  </Technology>
+  <Technology name="Python">
+    <Python />
+  </Technology>
+  <Technology name="PostgreSQL">
+    <PostgreSQL />
+  </Technology>
+  <Technology name="MySQL">
+    <MySQL />
+  </Technology>
   <Technology name="SQLServer">
     <SQLServer />
+  </Technology>
+  <Technology name="Firebase">
+    <Firebase />
+  </Technology>
+  <Technology name="MongoDB">
+    <MongoDB />
+  </Technology>
+
+  <Technology name="Redis">
+    <Redis />
+  </Technology>
+  <Technology name="Docker">
+    <Docker />
+  </Technology>
+  <Technology name="Dokku">
+    <Dokku />
+  </Technology>
+
+  <Technology name="Git">
+    <Git />
+  </Technology>
+
+  <Technology name="GitHub">
+    <GitHub />
+  </Technology>
+  <Technology name="Vercel">
+    <Vercel />
   </Technology>
 </div>

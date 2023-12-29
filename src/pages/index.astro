@@ -1,82 +1,113 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import DownArrowIcon from "@/icons/DownArrow.astro";
-import LinkedinIcon from "@/icons/Linkedin.astro";
-import WhatsAppIcon from "@/icons/WhatsApp.astro";
 import GitHubIcon from "@/icons/GitHub.astro";
 import GoogleIcon from "@/icons/Google.astro";
-
-import ThemeButton from "../components/ThemeButton.astro";
-import SocialMediaButton from "../components/SocialMediaButton.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import Layout from "../layouts/Layout.astro";
+import CustomSection from "../components/CustomSection.astro";
+import SocialPill from "../components/SocialPill.astro";
 import TechnologiesBox from "../components/TechnologiesBox.astro";
+import CPUIcon from "../icons/CPU.astro";
+import UserCircleIcon from "../icons/UserCircle.astro";
+import BriefcaseIcon from "../icons/Briefcase.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import FileCodeIcon from "../icons/FileCode.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Piero Web Portfolio">
-  <div class="relative flex-col flex h-screen justify-center items-center">
-    <header class="absolute right-0 top-0 text-cyan-400 p-4 w-20">
-      <ThemeButton />
-    </header>
-    <div class="relative -top-24 flex items-center px-20">
-      <div class="flex flex-col pr-24 gap-12">
-        <h1 class="text-7xl text-cyan-400">Hola, mi nombre es Piero</h1>
-        <p class="text-white text-3xl">
-          Soy un Full Stack Web Developer. Soy una persona apasionada por el
-          conocimiento y la innovación.
-        </p>
-        <!--Social Media Buttons -->
-
-        <ul class="flex flex-row gap-12 justify-center">
-          <SocialMediaButton
-            href="https://linkedin.com/in/piero-aparcana-alvarez"
-          >
-            <LinkedinIcon />
-          </SocialMediaButton>
-          <SocialMediaButton href="https://github.com/PieroGiovanni">
-            <GitHubIcon />
-          </SocialMediaButton>
-          <SocialMediaButton href="https://wa.me/+51948614445">
-            <WhatsAppIcon />
-          </SocialMediaButton>
-          <SocialMediaButton href="mailto:pierogiovannidev@gmail.com">
-            <GoogleIcon />
-          </SocialMediaButton>
-        </ul>
-      </div>
-      <picture class="shrink-0 w-[350px] h-[350px]">
-        <img class="rounded-full border-[6px] border-cyan-400" src="am3.jpg" />
-      </picture>
-    </div>
-    <div
-      class="text-cyan-400 justify-center flex w-32 absolute bottom-0 pb-20 animate-pulse"
+  <main class="px-4">
+    <section
+      id="home"
+      class="relative h-screen flex flex-col items-center justify-center w-full mx-auto lg:w-[801px] pb-24"
     >
-      <DownArrowIcon />
-    </div>
-  </div>
-  <!--About me -->
-  <div class="flex flex-col p-20 gap-12">
-    <h2 class="text-cyan-400 text-5xl">Sobre mi</h2>
-    <div class="flex flex-col text-white gap-6 text-xl">
-      <p>
-        Soy un Ingeniero de Sistemas con una sólida formación en el desarrollo
-        aplicaciones. Mi experiencia abarca tanto el frontend como el backend,
-        proporcionándome una visión completa del ciclo de vida del desarrollo de
-        software. Mi habilidad para resolver problemas complejos, combinada con
-        mi pensamiento intuitivo, me ha permitido superar con éxito diversos
-        desafíos.
-      </p>
-      <p>
-        Soy un profesional autodidacta e innovador, con un enfoque centrado en
-        brindar un servicio excepcional a los usuarios. Mi objetivo es aplicar
-        mis habilidades técnicas y mi pasión por la resolución de problemas para
-        desarrollar soluciones de software innovadoras y eficientes.
-      </p>
-    </div>
-  </div>
-  <!--Tecnologías -->
-  <div class="flex relative flex-col p-20 gap-12">
-    <h2 class="text-cyan-400 text-5xl">Tecnologías</h2>
-    <TechnologiesBox />
-  </div>
+      <div class="flex flex-row justify-center">
+        <div class="flex flex-col gap-12">
+          <div>
+            <h1
+              class="lg:text-6xl text-3xl md:text-4xl font-bold text-white text-balance"
+            >
+              Hola, soy Piero
+            </h1>
+          </div>
+          <h2 class="text-white lg:text-3xl md:text-2xl text-lg text-balance">
+            <span class="text-cyan-400">Desarrollador Full Stack</span>
+             apasionado por el aprendizaje, la innovación y la resolución de
+            problemas.
+          </h2>
+          <nav class="flex gap-4 flex-wrap">
+            <SocialPill href="https://linkedin.com/in/midudev">
+              <LinkedInIcon class="size-4 md:size-6" />
+               LinkedIn
+            </SocialPill>
+            <SocialPill href="https://github.com/midudev">
+              <GitHubIcon class="size-4 md:size-6" />
+               GitHub
+            </SocialPill>
+            <SocialPill href="mailto:miduga@gmail.com">
+              <GoogleIcon class="size-4 md:size-6" />
+               pierogiovannidev@gmail.com
+            </SocialPill>
+          </nav>
+        </div>
+
+        <picture class="shrink-0 lg:size-[250px] md:size-[200px] size-[150px]">
+          <img
+            class="rounded-full border-[6px] border-cyan-400"
+            src="am3.jpg"
+          />
+        </picture>
+      </div>
+
+      <div
+        class="text-cyan-400 justify-center flex size-32 absolute bottom-0 pb-6 animate-pulse"
+      >
+        <DownArrowIcon />
+      </div>
+    </section>
+
+    <CustomSection id="about-me" class="pt-12" name="Sobre mí">
+      <UserCircleIcon slot="icon" />
+      <div
+        class="flex flex-col text-white gap-6 text-xl text-balance"
+        slot="content"
+      >
+        <p>
+          Soy un Ingeniero de Sistemas con una sólida formación en el desarrollo
+          de aplicaciones. Mi experiencia como desarrollador abarca tanto el
+          frontend como el backend, proporcionándome una visión completa del
+          ciclo de vida del desarrollo de software.
+        </p>
+        <p>
+          Soy un profesional autodidacta e innovador, con un enfoque centrado en
+          brindar un servicio excepcional a los usuarios.
+        </p>
+        <p>
+          Mi habilidad para resolver problemas complejos, combinada con mi
+          pensamiento intuitivo, me ha permitido superar con éxito diversos
+          desafíos.
+        </p>
+        <p>
+          Mi objetivo es aplicar mis habilidades técnicas y mi pasión por la
+          resolución de problemas, para desarrollar soluciones de software
+          innovadoras y eficientes.
+        </p>
+      </div>
+    </CustomSection>
+
+    <CustomSection name="Tecnologías">
+      <CPUIcon slot="icon" />
+      <TechnologiesBox slot="content" class="mt-12" />
+    </CustomSection>
+    <CustomSection id="experience" name="Experiencia">
+      <BriefcaseIcon slot="icon" />
+      <ExperienceTimeline slot="content" />
+    </CustomSection>
+    <CustomSection id="projects" name="Proyectos Recientes">
+      <FileCodeIcon slot="icon" />
+      <Projects slot="content" />
+    </CustomSection>
+  </main>
 </Layout>
 
 <style></style>

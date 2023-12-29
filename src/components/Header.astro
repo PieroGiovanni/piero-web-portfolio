@@ -1,0 +1,33 @@
+---
+import ThemeButton from "./ThemeButton.astro";
+---
+
+<header
+  class="flex justify-center items-center mx-auto py-2 fixed top-0 w-full xl:w-[1120px] z-10 right-0 left-0"
+>
+  <nav
+    class="border-2 border-cyan-400 rounded-full px-1 py-1 flex flex-row bg-slate-950/50 backdrop-blur-2xl"
+  >
+    <a class="hover:bg-cyan-400/50 rounded-full px-3 transition" href="#"
+      >Inicio</a
+    >
+    <a
+      class="hover:bg-cyan-400/50 rounded-full px-3 transition"
+      href="#about-me">Sobre mí</a
+    >
+    <a
+      class="hover:bg-cyan-400/50 rounded-full px-3 transition"
+      href="#experience">Experiencia</a
+    >
+    <a
+      class="hover:bg-cyan-400/50 rounded-full px-3 transition"
+      href="#projects">Proyectos</a
+    >
+  </nav>
+
+  <ThemeButton />
+
+  <a href="/" class="absolute left-0 size-8">
+    <img src="favicon.svg" />
+  </a>
+</header>

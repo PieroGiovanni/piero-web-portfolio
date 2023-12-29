@@ -1,0 +1,133 @@
+---
+import GitHubIcon from "../icons/GitHub.astro";
+import ApolloIcon from "../icons/technologies/Apollo.astro";
+import AstroIcon from "../icons/technologies/AstroIcon.astro";
+import TailwindIcon from "../icons/technologies/Tailwind.astro";
+import NodeIcon from "../icons/technologies/NodeJs.astro";
+import GraphqlIcon from "../icons/technologies/GraphQL.astro";
+import ShadcnIcon from "../icons/technologies/Shadcn.astro";
+import PrismaIcon from "../icons/technologies/Prisma.astro";
+import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro";
+import NextJsIcon from "../icons/technologies/NextJs.astro";
+import TypeScriptIcon from "../icons/technologies/TypeScript.astro";
+
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+  github?: string;
+  image: string;
+  tags: Tag[];
+}
+
+interface Tag {
+  name: string;
+  icon: (_props: Record<string, any>) => any;
+  // class?: string;
+}
+
+enum Technologies {
+  NEXT = "NEXT",
+  TAILWIND = "TAILWIND",
+  ASTRO = "ASTRO",
+  GRAPHQL = "GRAPHQL",
+  NODE = "NODE",
+  APOLLO = "APOLLO",
+  SHADCN = "SHADCN",
+  PRISMA = "PRISMA",
+  POSTGRESQL = "POSTGRESQL",
+  TYPESCRIPT = "TYPESCRIPT",
+}
+
+const Tags: { [key in Technologies]: Tag } = {
+  NEXT: {
+    name: "Next.js",
+    icon: NextJsIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+  },
+  APOLLO: {
+    name: "Apollo",
+    icon: ApolloIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  GRAPHQL: {
+    name: "GraphQL",
+    icon: GraphqlIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    icon: NodeIcon,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    icon: PostgreSQLIcon,
+  },
+  PRISMA: {
+    name: "Prisma",
+    icon: PrismaIcon,
+  },
+  SHADCN: {
+    name: "shadcn",
+    icon: ShadcnIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    icon: TypeScriptIcon,
+  },
+};
+
+const projects: Project[] = [
+  {
+    title: "Muy Guay",
+    description:
+      "E-commerce con paginación infinita desarrollado desde cero. Sitio web elogiado por su diseño atractivo y funcionalidad intuitiva. Optimizado para SEO y rendimiento.",
+    link: "https://muyguay.shop",
+    github: undefined,
+    image: "/images/projects/muyguay.webp",
+    tags: [
+      Tags.NEXT,
+      Tags.TYPESCRIPT,
+      Tags.NODE,
+      Tags.GRAPHQL,
+      Tags.TAILWIND,
+      Tags.POSTGRESQL,
+      Tags.SHADCN,
+      Tags.PRISMA,
+      Tags.APOLLO,
+    ],
+  },
+];
+---
+
+{
+  projects.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-cyan-400 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-2 flex-row mb-2 justify-center flex-wrap">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full bg-white/10 text-xs py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+    </article>
+  ))
+}
