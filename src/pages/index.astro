@@ -19,23 +19,23 @@ import Projects from "../components/Projects.astro";
   <main class="px-4">
     <section
       id="home"
-      class="relative h-screen flex flex-col items-center justify-center w-full mx-auto lg:w-[801px] pb-24"
+      class="relative h-screen flex flex-col items-center justify-center w-full mx-auto lg:w-[800px] pb-24"
     >
       <div class="flex flex-row justify-center">
         <div class="flex flex-col gap-12">
           <div>
-            <h1
-              class="lg:text-6xl text-3xl md:text-4xl font-bold text-white text-balance"
-            >
+            <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold text-balance">
               Hola, soy Piero
             </h1>
           </div>
-          <h2 class="text-white lg:text-3xl md:text-2xl text-lg text-balance">
-            <span class="text-cyan-400">Desarrollador Full Stack</span>
+          <h2 class="lg:text-3xl md:text-2xl text-lg text-balance">
+            <span class="dark:text-cyan-400 text-cyan-500"
+              >Desarrollador Full Stack</span
+            >
              apasionado por el aprendizaje, la innovación y la resolución de
             problemas.
           </h2>
-          <nav class="flex gap-4 flex-wrap">
+          <nav class="flex gap-[14px] flex-wrap justify-center">
             <SocialPill href="https://linkedin.com/in/midudev">
               <LinkedInIcon class="size-4 md:size-6" />
                LinkedIn
@@ -51,27 +51,21 @@ import Projects from "../components/Projects.astro";
           </nav>
         </div>
 
-        <picture class="shrink-0 lg:size-[250px] md:size-[200px] size-[150px]">
-          <img
-            class="rounded-full border-[6px] border-cyan-400"
-            src="am3.jpg"
-          />
+        <picture
+          class="shrink-0 lg:size-[250px] md:size-[200px] size-[150px] flex items-center justify-center border-[5px] border-cyan-500 dark:border-cyan-400 rounded-full"
+        >
+          <img id="user-img" class="rounded-full" src="am3.webp" />
         </picture>
       </div>
 
-      <div
-        class="text-cyan-400 justify-center flex size-32 absolute bottom-0 pb-6 animate-pulse"
-      >
-        <DownArrowIcon />
-      </div>
+      <DownArrowIcon
+        class="size-24 dark:text-cyan-400 absolute bottom-0 pb-6 animate-pulse text-cyan-500"
+      />
     </section>
 
     <CustomSection id="about-me" class="pt-12" name="Sobre mí">
       <UserCircleIcon slot="icon" />
-      <div
-        class="flex flex-col text-white gap-6 text-xl text-balance"
-        slot="content"
-      >
+      <div class="flex flex-col gap-6 text-xl text-pretty" slot="content">
         <p>
           Soy un Ingeniero de Sistemas con una sólida formación en el desarrollo
           de aplicaciones. Mi experiencia como desarrollador abarca tanto el
@@ -109,5 +103,3 @@ import Projects from "../components/Projects.astro";
     </CustomSection>
   </main>
 </Layout>
-
-<style></style>

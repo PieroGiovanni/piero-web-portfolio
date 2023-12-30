@@ -1,4 +1,5 @@
 ---
+import LogoIcon from "../icons/Logo.astro";
 import ThemeButton from "./ThemeButton.astro";
 ---
 
@@ -6,10 +7,11 @@ import ThemeButton from "./ThemeButton.astro";
   class="flex justify-center items-center mx-auto py-2 fixed top-0 w-full xl:w-[1120px] z-10 right-0 left-0"
 >
   <nav
-    class="border-2 border-cyan-400 rounded-full px-1 py-1 flex flex-row bg-slate-950/50 backdrop-blur-2xl"
+    class="border-2 border-cyan-500 rounded-full px-1 py-1 flex flex-row dark:bg-slate-950/50 backdrop-blur-2xl dark:border-cyan-400 bg-slate-950/5"
   >
-    <a class="hover:bg-cyan-400/50 rounded-full px-3 transition" href="#"
-      >Inicio</a
+    <a
+      class="dark:hover:bg-cyan-400/50 hover:bg-cyan-500/30 rounded-full px-3 transition"
+      href="#">Inicio</a
     >
     <a
       class="hover:bg-cyan-400/50 rounded-full px-3 transition"
@@ -28,6 +30,6 @@ import ThemeButton from "./ThemeButton.astro";
   <ThemeButton />
 
   <a href="/" class="absolute left-0 size-8">
-    <img src="favicon.svg" />
+    <LogoIcon class="size-8" />
   </a>
 </header>

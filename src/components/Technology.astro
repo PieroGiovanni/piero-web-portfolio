@@ -7,8 +7,8 @@ const { name } = Astro.props;
 ---
 
 <div class="flex flex-col items-center gap-2">
-  <div class="flex h-14 w-14 text-white fill-white">
+  <div class="flex size-14">
     <slot />
   </div>
-  <p class="text-white text-center">{name}</p>
+  <p class="text-center">{name}</p>
 </div>
