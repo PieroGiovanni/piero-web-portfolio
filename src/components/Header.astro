@@ -1,35 +1,43 @@
 ---
+import { getI18N } from "../i18n";
 import LogoIcon from "../icons/Logo.astro";
+import LanguageButton from "./LanguageButton.astro";
 import ThemeButton from "./ThemeButton.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header
-  class="flex justify-center items-center mx-auto py-2 fixed top-0 w-full xl:w-[1120px] z-10 right-0 left-0"
+  class="flex justify-center items-center mx-auto fixed top-0 my-1 w-full xl:w-[1120px] z-10 right-0 left-0"
 >
   <nav
-    class="border-2 border-cyan-500 rounded-full px-1 py-1 flex flex-row dark:bg-slate-950/50 backdrop-blur-2xl dark:border-cyan-400 bg-slate-950/5"
+    class="border-2 border-cyan-600 rounded-full px-1 py-1 flex flex-row dark:bg-slate-950/50 backdrop-blur-2xl dark:border-cyan-400 bg-slate-950/5"
   >
     <a
-      class="dark:hover:bg-cyan-400/50 hover:bg-cyan-500/30 rounded-full px-3 transition"
-      href="#">Inicio</a
+      class="dark:hover:bg-cyan-400/50 hover:bg-cyan-600/30 rounded-full px-3 transition"
+      href="#">{i18n.HEADER[1]}</a
     >
     <a
       class="hover:bg-cyan-400/50 rounded-full px-3 transition"
-      href="#about-me">Sobre mí</a
+      href="#about-me">{i18n.SECTION.ABOUT_ME.TITLE}</a
     >
     <a
       class="hover:bg-cyan-400/50 rounded-full px-3 transition"
-      href="#experience">Experiencia</a
+      href="#experience">{i18n.SECTION.EXPERIENCE.TITLE}</a
     >
     <a
       class="hover:bg-cyan-400/50 rounded-full px-3 transition"
-      href="#projects">Proyectos</a
+      href="#projects">{i18n.HEADER[4]}</a
     >
   </nav>
 
-  <ThemeButton />
+  <div class="flex items-center absolute right-0 gap-2">
+    <LanguageButton />
+    <ThemeButton />
+  </div>
 
-  <a href="/" class="absolute left-0 size-8">
-    <LogoIcon class="size-8" />
+  <a href="/" class="absolute left-0">
+    <LogoIcon class="size-9" />
   </a>
 </header>

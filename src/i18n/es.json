@@ -1,0 +1,61 @@
+{
+  "SEO_TITLE": "Piero Giovanni Desarrollador Full Stack | Porfolio",
+  "SEO_DESCRIPTION": "Explora el porfolio de Piero Giovanni, un hábil desarrollador full stack con conocimientos en diversas tecnologías",
+  "INTRO_TITLE": "Hola, soy Piero",
+  "INTRO_DESCRIPTION_1": "Desarrollador Full Stack",
+  "INTRO_DESCRIPTION_2": "apasionado por el aprendizaje, la innovación y la resolución de problemas.",
+
+  "SECTION": {
+    "ABOUT_ME": {
+      "TITLE": "Sobre mí",
+      "PARAGRAPH": {
+        "1": "Soy un Ingeniero de Sistemas con una sólida formación en el desarrollo de aplicaciones. Mi experiencia como desarrollador abarca tanto el frontend como el backend, proporcionándome una visión completa del ciclo de vida del desarrollo de software.",
+        "2": "Soy un profesional autodidacta e innovador, con un enfoque centrado en brindar un servicio excepcional a los usuarios.",
+        "3": "Mi habilidad para resolver problemas complejos, combinada con mi pensamiento intuitivo, me ha permitido superar con éxito diversos desafíos.",
+        "4": "Mi objetivo es aplicar mis habilidades técnicas y mi pasión por la resolución de problemas, para desarrollar soluciones de software innovadoras y eficientes."
+      }
+    },
+    "TECHNOLOGY": {
+      "TITLE": "Tecnologías"
+    },
+    "EXPERIENCE": {
+      "TITLE": "Experiencia",
+      "DATE": {
+        "1": "Enero 2021 - Actualidad",
+        "2": "Marzo 2022 - Noviembre 2022",
+        "3": "Diciembre 2013 - Noviembre 2021"
+      },
+      "JOB_TITLE": {
+        "1": "Desarrollador Web Freelancer",
+        "2": "Técnico de Soporte informático en COPRODECA",
+        "3": "Asistente de Sistemas en SOLVIV"
+      },
+      "JOB_DESCRIPTION": {
+        "1": [
+          "Desarrollé aplicaciones web atractivas utilizando tecnologías modernas",
+          "Implementé soluciones eficientes y escalables que impulsaron el crecimiento y optimizaron las operaciones comerciales de diversas empresas.",
+          "Asumí la responsabilidad del ciclo de vida del desarrollo de diversos proyectos, desde la conceptualización e implementación del servidor y la API, hasta el diseño de la interfaz de usuario."
+        ],
+        "2": [
+          "Colaboré en la resolución de problemas técnicos y brindé soporte a usuarios."
+        ],
+        "3": [
+          "Desarrollé y mantuve aplicaciones web para el análisis y gestión de datos.",
+          "Participé en la implementación y administración de sistemas informáticos.",
+          "Colaboré en la resolución de problemas técnicos y brindé soporte a usuarios."
+        ]
+      }
+    },
+    "PROJECTS": {
+      "TITLE": "PROYECTOS RECIENTES",
+      "1": {
+        "TITLE": "Muy Guay",
+        "DESCRIPTION": "E-commerce con paginación infinita desarrollado desde cero. Sitio web elogiado por su diseño atractivo y funcionalidad intuitiva. Optimizado para SEO y rendimiento."
+      }
+    }
+  },
+  "HEADER": {
+    "1": "Inicio",
+    "4": "Proyectos"
+  }
+}

@@ -1,0 +1,18 @@
+---
+import EnglandIcon from "../icons/flags/England.astro";
+import SpainIcon from "../icons/flags/Spain.astro";
+
+const { currentLocale } = Astro;
+---
+
+{
+  currentLocale === "en" ? (
+    <a href="/">
+      <EnglandIcon class="size-7 rounded-full border-2 border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
+    </a>
+  ) : (
+    <a href="/en">
+      <SpainIcon class="size-7 rounded-full border-2 border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
+    </a>
+  )
+}

@@ -1,0 +1,62 @@
+{
+  "SEO_TITLE": "Piero Giovanni Full Stack Developer | Portfolio",
+  "SEO_DESCRIPTION": "Explore the portfolio of Piero Giovanni, a skilled full stack developer with knowledge in various technologies",
+  "INTRO_TITLE": "Hello, I'm Piero",
+  "INTRO_DESCRIPTION_1": "Full Stack Developer",
+  "INTRO_DESCRIPTION_2": "passionate about learning, innovation, and problem-solving.",
+
+  "SECTION": {
+    "ABOUT_ME": {
+      "TITLE": "About me",
+      "PARAGRAPH": {
+        "1": "I am a Systems Engineer with a solid background in application development. My experience as a developer covers both frontend and backend, providing me with a complete view of the software development lifecycle.",
+        "2": "I am a self-taught and innovative professional, with a focus on providing exceptional service to users.",
+        "3": "My ability to solve complex problems, combined with my intuitive thinking, has allowed me to successfully overcome various challenges.",
+        "4": "My goal is to apply my technical skills and my passion for problem solving, to develop innovative and efficient software solutions."
+      }
+    },
+    "TECHNOLOGY": {
+      "TITLE": "Technologies"
+    },
+    "EXPERIENCE": {
+      "TITLE": "Experience",
+      "DATE": {
+        "1": "January 2021 - Present",
+        "2": "March 2022 - November 2022",
+        "3": "December 2013 - November 2021"
+      },
+      "JOB_TITLE": {
+        "1": "Freelance Web Developer",
+        "2": "Help Desk at COPRODECA",
+        "3": "IT Assistant at SOLVIV"
+      },
+
+      "JOB_DESCRIPTION": {
+        "1": [
+          "I developed attractive web applications using modern technologies",
+          "I implemented efficient and scalable solutions that drove growth and optimized the business operations of various companies.",
+          "I took responsibility for the lifecycle of various projects, from server and API conceptualization and implementation to user interface design."
+        ],
+        "2": [
+          "I collaborated in solving technical problems and provided support to users."
+        ],
+        "3": [
+          "I developed and maintained web applications for data analysis and management.",
+          "I participated in the implementation and administration of computer systems.",
+          "I collaborated in solving technical problems and provided support to users."
+        ]
+      }
+    },
+    "PROJECTS": {
+      "TITLE": "RECENT PROJECTS",
+      "1": {
+        "TITLE": "Muy Guay",
+        "DESCRIPTION": "E-commerce with infinite pagination developed from scratch. Website praised for its attractive design and intuitive functionality. Optimized for SEO and performance."
+      }
+    }
+  },
+  "HEADER": {
+    "1": "Home",
+    "4": "Projects"
+  }
+}

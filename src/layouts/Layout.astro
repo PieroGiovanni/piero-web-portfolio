@@ -1,54 +1,56 @@
 ---
 import "@fontsource-variable/inter";
-import ThemeButton from "../components/ThemeButton.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="relative text-black dark:text-white font-sans">
+
+  <body class="text-black dark:text-white relative">
     <div
-      class="h-full w-full -z-10 fixed dark:bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] dark:from-black dark:via-slate-950 dark:to-black bg-white"
+      class="h-full w-full -z-10 fixed dark:bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] dark:from-black dark:via-slate-950 dark:to-black bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-100 via-white to-cyan-100"
     >
     </div>
     <Header />
     <slot />
   </body>
-</html>
-<style is:global>
-  :root {
-    color-scheme: light dark;
-  }
 
-  html {
-    font-family: system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+  <style is:global>
+    :root {
+      color-scheme: light dark;
     }
-  }
-</style>
+
+    html {
+      font-family: system-ui, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</html>

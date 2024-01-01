@@ -1,0 +1,106 @@
+---
+import DownArrowIcon from "@/icons/DownArrow.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
+import GoogleIcon from "@/icons/Google.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+
+import CustomSection from "@/components/CustomSection.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import TechnologiesBox from "@/components/TechnologiesBox.astro";
+import CPUIcon from "@/icons/CPU.astro";
+import UserCircleIcon from "@/icons/UserCircle.astro";
+import BriefcaseIcon from "@/icons/Briefcase.astro";
+import ExperienceTimeline from "@/components/ExperienceTimeline.astro";
+import FileCodeIcon from "@/icons/FileCode.astro";
+import Projects from "@/components/Projects.astro";
+
+import { getI18N } from "@/i18n/index";
+import Layout from "../layouts/Layout.astro";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <main class="px-4">
+    <section
+      id="home"
+      class="relative h-screen flex flex-col items-center justify-center w-full mx-auto lg:w-[800px] pb-24"
+    >
+      <div class="flex flex-row justify-center">
+        <div class="flex flex-col gap-12">
+          <div>
+            <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold text-balance">
+              {i18n.INTRO_TITLE}
+            </h1>
+          </div>
+          <h2 class="lg:text-3xl md:text-2xl text-lg text-balance">
+            <span class="dark:text-cyan-400 text-cyan-600"
+              >{i18n.INTRO_DESCRIPTION_1}</span
+            >
+            {i18n.INTRO_DESCRIPTION_2}
+          </h2>
+          <nav class="flex gap-[14px] flex-wrap justify-center">
+            <SocialPill href="https://linkedin.com/in/piero-aparcana-alvarez">
+              <LinkedInIcon class="size-4 md:size-6" />
+               LinkedIn
+            </SocialPill>
+            <SocialPill href="https://github.com/PieroGiovanni">
+              <GitHubIcon class="size-4 md:size-6" />
+               GitHub
+            </SocialPill>
+            <SocialPill href="mailto:pierogiovanndev@gmail.com">
+              <GoogleIcon class="size-4 md:size-6" />
+               pierogiovannidev@gmail.com
+            </SocialPill>
+          </nav>
+        </div>
+
+        <img
+          class="lg:size-[250px] md:size-[200px] size-[150px] border-[5px] border-cyan-600 dark:border-cyan-400 rounded-full"
+          src="/am3.webp"
+        />
+      </div>
+
+      <DownArrowIcon
+        class="size-24 dark:text-cyan-400 absolute bottom-0 pb-6 animate-pulse text-cyan-600"
+      />
+    </section>
+
+    <CustomSection
+      id="about-me"
+      class="pt-12"
+      name={i18n.SECTION.ABOUT_ME.TITLE}
+    >
+      <UserCircleIcon slot="icon" />
+      <div class="flex flex-col gap-6 text-xl text-pretty" slot="content">
+        <p>
+          {i18n.SECTION.ABOUT_ME.PARAGRAPH[1]}
+        </p>
+        <p>
+          {i18n.SECTION.ABOUT_ME.PARAGRAPH[2]}
+        </p>
+        <p>
+          {i18n.SECTION.ABOUT_ME.PARAGRAPH[3]}
+        </p>
+        <p>
+          {i18n.SECTION.ABOUT_ME.PARAGRAPH[4]}
+        </p>
+      </div>
+    </CustomSection>
+
+    <CustomSection name={i18n.SECTION.TECHNOLOGY.TITLE}>
+      <CPUIcon slot="icon" />
+      <TechnologiesBox slot="content" class="mt-12" />
+    </CustomSection>
+    <CustomSection id="experience" name={i18n.SECTION.EXPERIENCE.TITLE}>
+      <BriefcaseIcon slot="icon" />
+      <ExperienceTimeline slot="content" />
+    </CustomSection>
+    <CustomSection id="projects" name={i18n.SECTION.PROJECTS.TITLE}>
+      <FileCodeIcon slot="icon" />
+      <Projects slot="content" />
+    </CustomSection>
+  </main>
+</Layout>
