@@ -1,7 +1,7 @@
 {
   "SEO_TITLE": "Piero Giovanni Full Stack Developer | Portfolio",
   "SEO_DESCRIPTION": "Explore the portfolio of Piero Giovanni, a skilled full stack developer with knowledge in various technologies",
-  "INTRO_TITLE": "Hello, I'm Piero",
+  "INTRO_TITLE": "Hey, I'm Piero",
   "INTRO_DESCRIPTION_1": "Full Stack Developer",
   "INTRO_DESCRIPTION_2": "passionate about learning, innovation, and problem-solving.",
 
@@ -9,7 +9,7 @@
     "ABOUT_ME": {
       "TITLE": "About me",
       "PARAGRAPH": {
-        "1": "I am a Systems Engineer with a solid background in application development. My experience as a developer covers both frontend and backend, providing me with a complete view of the software development lifecycle.",
+        "1": "I am a Systems Engineer with a solid background in software development. My experience as a developer covers both frontend and backend, providing me with a complete view of the software development lifecycle.",
         "2": "I am a self-taught and innovative professional, with a focus on providing exceptional service to users.",
         "3": "My ability to solve complex problems, combined with my intuitive thinking, has allowed me to successfully overcome various challenges.",
         "4": "My goal is to apply my technical skills and my passion for problem solving, to develop innovative and efficient software solutions."
@@ -52,6 +52,10 @@
       "1": {
         "TITLE": "Muy Guay",
         "DESCRIPTION": "E-commerce with infinite pagination developed from scratch. Website praised for its attractive design and intuitive functionality. Optimized for SEO and performance."
+      },
+      "2": {
+        "TITLE": "Web Portfolio",
+        "DESCRIPTION": "Web Portfolio with internatiolization and dark mode. Optimized for performance and SEO"
       }
     }
   },

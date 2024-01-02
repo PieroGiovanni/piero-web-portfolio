@@ -1,16 +1,17 @@
 ---
-import GitHubIcon from "../icons/GitHub.astro";
+import { getI18N } from "../i18n";
 import ApolloIcon from "../icons/technologies/Apollo.astro";
 import AstroIcon from "../icons/technologies/AstroIcon.astro";
-import TailwindIcon from "../icons/technologies/Tailwind.astro";
-import NodeIcon from "../icons/technologies/NodeJs.astro";
+import CSSIcon from "../icons/technologies/CSS.astro";
 import GraphqlIcon from "../icons/technologies/GraphQL.astro";
-import ShadcnIcon from "../icons/technologies/Shadcn.astro";
-import PrismaIcon from "../icons/technologies/Prisma.astro";
-import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro";
+import HTMLIcon from "../icons/technologies/HTML.astro";
 import NextJsIcon from "../icons/technologies/NextJs.astro";
+import NodeIcon from "../icons/technologies/NodeJs.astro";
+import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro";
+import PrismaIcon from "../icons/technologies/Prisma.astro";
+import ShadcnIcon from "../icons/technologies/Shadcn.astro";
+import TailwindIcon from "../icons/technologies/Tailwind.astro";
 import TypeScriptIcon from "../icons/technologies/TypeScript.astro";
-import { getI18N } from "../i18n";
 
 interface Project {
   title: string;
@@ -40,6 +41,8 @@ enum Technologies {
   PRISMA = "PRISMA",
   POSTGRESQL = "POSTGRESQL",
   TYPESCRIPT = "TYPESCRIPT",
+  HTML = "HTML",
+  CSS = "CSS",
 }
 
 const Tags: { [key in Technologies]: Tag } = {
@@ -83,6 +86,14 @@ const Tags: { [key in Technologies]: Tag } = {
     name: "TypeScript",
     icon: TypeScriptIcon,
   },
+  HTML: {
+    name: "HTML",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    icon: CSSIcon,
+  },
 };
 
 const projects: Project[] = [
@@ -103,6 +114,14 @@ const projects: Project[] = [
       Tags.PRISMA,
       Tags.APOLLO,
     ],
+  },
+  {
+    title: i18n.SECTION.PROJECTS[2].TITLE,
+    description: i18n.SECTION.PROJECTS[2].DESCRIPTION,
+    link: "https://pierogiovanni.com",
+    github: undefined,
+    image: "images/projects/web-portfolio.webp",
+    tags: [Tags.ASTRO, Tags.TYPESCRIPT, Tags.HTML, Tags.CSS],
   },
 ];
 ---

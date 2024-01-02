@@ -51,6 +51,10 @@
       "1": {
         "TITLE": "Muy Guay",
         "DESCRIPTION": "E-commerce con paginación infinita desarrollado desde cero. Sitio web elogiado por su diseño atractivo y funcionalidad intuitiva. Optimizado para SEO y rendimiento."
+      },
+      "2": {
+        "TITLE": "Porfolio Web",
+        "DESCRIPTION": "Porfolio Web con internacionalización y modo oscuro. Optimizado para rendimiento y SEO."
       }
     }
   },

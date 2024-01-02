@@ -28,10 +28,10 @@ const i18n = getI18N({ currentLocale });
       id="home"
       class="relative h-screen flex flex-col items-center justify-center w-full mx-auto lg:w-[800px] pb-24"
     >
-      <div class="flex flex-row justify-center">
+      <div class="flex flex-row justify-center text-pretty">
         <div class="flex flex-col gap-12">
           <div>
-            <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold text-balance">
+            <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold">
               {i18n.INTRO_TITLE}
             </h1>
           </div>
@@ -58,8 +58,9 @@ const i18n = getI18N({ currentLocale });
         </div>
 
         <img
+          alt="Draw of Piero"
           class="lg:size-[250px] md:size-[200px] size-[150px] border-[5px] border-cyan-600 dark:border-cyan-400 rounded-full"
-          src="/am3.webp"
+          src="am3.webp"
         />
       </div>
 

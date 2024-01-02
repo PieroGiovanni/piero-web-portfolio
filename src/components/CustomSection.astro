@@ -10,7 +10,7 @@ const { class: className, id, name } = Astro.props;
 
 <section
   id={id}
-  class=`${className} w-full mx-auto lg:w-[816px] pb-24 flex flex-col gap-16 justify-center`
+  class=`${className} w-full mx-auto lg:w-[816px] pb-24 flex flex-col gap-16 justify-center animate-fade`
 >
   <div class="flex items-center gap-4">
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
@@ -23,3 +23,9 @@ const { class: className, id, name } = Astro.props;
 
   <slot name="content" {...Astro.props} />
 </section>
+<style>
+  section {
+    animation-range: entry 15% cover 30%;
+    animation-timeline: view();
+  }
+</style>
