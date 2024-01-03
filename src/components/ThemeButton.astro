@@ -11,25 +11,6 @@ import MoonIcon from "@/icons/Moon.astro";
   <SunIcon class="dark:hidden" />
   <MoonIcon class="hidden dark:block" />
 </button>
-<style>
-  <style > #themeToggle {
-    border: 0;
-    background: none;
-  }
-  .sun {
-    fill: black;
-  }
-  .moon {
-    fill: transparent;
-  }
-
-  :global(.dark) .sun {
-    fill: transparent;
-  }
-  :global(.dark) .moon {
-    fill: white;
-  }
-</style>
 
 <script is:inline>
   const theme = (() => {
