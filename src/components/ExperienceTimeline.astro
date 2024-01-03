@@ -18,7 +18,7 @@ const i18n = getI18N({ currentLocale });
     <h3 class="text-lg font-semibold text-cyan-600 dark:text-cyan-400">
       {i18n.SECTION.EXPERIENCE.JOB_TITLE[1]}
     </h3>
-    <ul class="text-base text-black list-disc ml-4 text-pretty dark:text-white">
+    <ul class="text-base list-disc ml-4 text-pretty">
       {
         i18n.SECTION.EXPERIENCE.JOB_DESCRIPTION[1].map((description) => (
           <li>
@@ -63,18 +63,14 @@ const i18n = getI18N({ currentLocale });
       {i18n.SECTION.EXPERIENCE.JOB_TITLE[3]}
     </h3>
 
-    <ul class="text-base list-disc ml-4">
-      <ul
-        class="text-base text-black list-disc ml-4 text-pretty dark:text-white"
-      >
-        {
-          i18n.SECTION.EXPERIENCE.JOB_DESCRIPTION[1].map((description) => (
-            <li>
-              <p>{description}</p>
-            </li>
-          ))
-        }
-      </ul>
+    <ul class="text-base list-disc ml-4 text-pretty">
+      {
+        i18n.SECTION.EXPERIENCE.JOB_DESCRIPTION[3].map((description) => (
+          <li>
+            <p>{description}</p>
+          </li>
+        ))
+      }
     </ul>
   </li>
 </ol>

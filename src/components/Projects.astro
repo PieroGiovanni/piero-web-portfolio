@@ -1,5 +1,6 @@
 ---
 import { getI18N } from "../i18n";
+import ExternalLink from "../icons/ExternalLink.astro";
 import ApolloIcon from "../icons/technologies/Apollo.astro";
 import AstroIcon from "../icons/technologies/AstroIcon.astro";
 import CSSIcon from "../icons/technologies/CSS.astro";
@@ -127,13 +128,13 @@ const projects: Project[] = [
 ---
 
 {
-  projects.map(({ image, title, description, tags }) => (
+  projects.map(({ image, title, description, tags, link }) => (
     <article>
       <h3 class="text-2xl font-semibold dark:text-cyan-400 text-cyan-600 mb-2">
         {title}
       </h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-2 flex-row mb-2 justify-center flex-wrap">
+      <ul class="flex gap-2 flex-row mb-4 justify-center flex-wrap">
         {tags.map((tag) => (
           <li>
             <span
@@ -145,12 +146,15 @@ const projects: Project[] = [
           </li>
         ))}
       </ul>
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-      />
+      <a href={link} class="relative group">
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl dark:shadow-white/20 aspect-video shadow-black/20"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+        <ExternalLink class="size-8 absolute top-1 right-1 transition:all duration-500 opacity-0 group-hover:opacity-100 text-white" />
+      </a>
     </article>
   ))
 }
