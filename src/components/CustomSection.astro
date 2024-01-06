@@ -14,9 +14,9 @@ const { class: className, id, name } = Astro.props;
 >
   <div class="flex items-center gap-4">
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
-    <div class="flex gap-2">
-      <slot name="icon" class="size-10 font-bold" />
-      <h2 class="relative -top-[2px] text-3xl md:text-4xl font-semibold">
+    <div class="flex gap-2 items-center">
+      <slot name="icon" />
+      <h2 class="relative text-3xl md:text-4xl font-semibold">
         {name}
       </h2>
     </div>
@@ -27,7 +27,7 @@ const { class: className, id, name } = Astro.props;
 </section>
 <style>
   section {
-    animation-range: entry 15% cover 30%;
+    animation-range: entry 15% cover 22%;
     animation-timeline: view();
   }
 </style>

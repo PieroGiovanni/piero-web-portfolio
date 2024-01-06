@@ -78,7 +78,7 @@ const i18n = getI18N({ currentLocale });
       class="pt-12"
       name={i18n.SECTION.ABOUT_ME.TITLE}
     >
-      <UserCircleIcon slot="icon" />
+      <UserCircleIcon slot="icon" class="size-10 stroke-[1.5]" />
       <div
         class="flex flex-col gap-6 text-base lg:text-xl text-pretty"
         slot="content"
@@ -99,15 +99,15 @@ const i18n = getI18N({ currentLocale });
     </CustomSection>
 
     <CustomSection name={i18n.SECTION.TECHNOLOGY.TITLE}>
-      <CPUIcon slot="icon" />
+      <CPUIcon slot="icon" class="size-10 stroke-[1.5]" />
       <TechnologiesBox slot="content" class="mt-12" />
     </CustomSection>
     <CustomSection id="experience" name={i18n.SECTION.EXPERIENCE.TITLE}>
-      <BriefcaseIcon slot="icon" />
+      <BriefcaseIcon slot="icon" class="size-10 stroke-[1.5]" />
       <ExperienceTimeline slot="content" />
     </CustomSection>
     <CustomSection id="projects" name={i18n.SECTION.PROJECTS.TITLE}>
-      <FileCodeIcon slot="icon" />
+      <FileCodeIcon slot="icon" class="size-10 stroke-[1.5]" />
       <Projects slot="content" />
     </CustomSection>
   </main>
