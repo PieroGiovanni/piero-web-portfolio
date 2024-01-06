@@ -10,6 +10,7 @@ import NextJsIcon from "../icons/technologies/NextJs.astro";
 import NodeIcon from "../icons/technologies/NodeJs.astro";
 import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro";
 import PrismaIcon from "../icons/technologies/Prisma.astro";
+import ReactIcon from "../icons/technologies/React.astro";
 import ShadcnIcon from "../icons/technologies/Shadcn.astro";
 import TailwindIcon from "../icons/technologies/Tailwind.astro";
 import TypeScriptIcon from "../icons/technologies/TypeScript.astro";
@@ -44,6 +45,7 @@ enum Technologies {
   TYPESCRIPT = "TYPESCRIPT",
   HTML = "HTML",
   CSS = "CSS",
+  REACT = "REACT",
 }
 
 const Tags: { [key in Technologies]: Tag } = {
@@ -95,11 +97,15 @@ const Tags: { [key in Technologies]: Tag } = {
     name: "CSS",
     icon: CSSIcon,
   },
+  REACT: {
+    name: "React",
+    icon: ReactIcon,
+  },
 };
 
 const projects: Project[] = [
   {
-    title: "Muy Guay",
+    title: "Muy Guay E-commerce",
     description: i18n.SECTION.PROJECTS[1].DESCRIPTION,
     link: "https://muyguay.shop",
     github: undefined,
@@ -121,8 +127,23 @@ const projects: Project[] = [
     description: i18n.SECTION.PROJECTS[2].DESCRIPTION,
     link: "https://pierogiovanni.com",
     github: undefined,
-    image: "images/projects/web-portfolio.webp",
-    tags: [Tags.ASTRO, Tags.TYPESCRIPT, Tags.HTML, Tags.CSS],
+    image: "/images/projects/web-portfolio.webp",
+    tags: [Tags.ASTRO, Tags.TYPESCRIPT, Tags.HTML, Tags.CSS, Tags.TAILWIND],
+  },
+  {
+    title: i18n.SECTION.PROJECTS[3].TITLE,
+    description: i18n.SECTION.PROJECTS[3].DESCRIPTION,
+    link: "https://dapper-narwhal-3fc91b.netlify.app/",
+    github: undefined,
+    image: "/images/projects/spotify-clone.webp",
+    tags: [
+      Tags.ASTRO,
+      Tags.TYPESCRIPT,
+      Tags.REACT,
+      Tags.HTML,
+      Tags.CSS,
+      Tags.TAILWIND,
+    ],
   },
 ];
 ---

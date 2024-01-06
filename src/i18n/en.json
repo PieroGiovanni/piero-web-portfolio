@@ -56,6 +56,10 @@
       "2": {
         "TITLE": "Web Portfolio",
         "DESCRIPTION": "Web Portfolio with internatiolization and dark mode. Optimized for performance and SEO"
+      },
+      "3": {
+        "TITLE": "Spotify Web Player Clone",
+        "DESCRIPTION": "Clone of the popular music service Spotify, made with Astro, a modern front-end website generator that offers incredible fast performance"
       }
     }
   },

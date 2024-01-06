@@ -10,13 +10,15 @@ const { class: className, id, name } = Astro.props;
 
 <section
   id={id}
-  class=`${className} w-full mx-auto lg:w-[816px] pb-24 flex flex-col gap-16 justify-center animate-fade`
+  class=`${className} w-full mx-auto lg:w-[816px] lg:pb-24 pb-16 flex flex-col lg:gap-16 gap-8 justify-center animate-fade`
 >
   <div class="flex items-center gap-4">
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
     <div class="flex gap-2">
       <slot name="icon" class="size-10 font-bold" />
-      <h2 class="relative -top-[2px] text-4xl font-semibold">{name}</h2>
+      <h2 class="relative -top-[2px] text-3xl md:text-4xl font-semibold">
+        {name}
+      </h2>
     </div>
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
   </div>

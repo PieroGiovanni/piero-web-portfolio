@@ -32,7 +32,7 @@
       },
       "JOB_DESCRIPTION": {
         "1": [
-          "Desarrollé aplicaciones web atractivas utilizando tecnologías modernas",
+          "Desarrollé aplicaciones web atractivas utilizando tecnologías modernas.",
           "Implementé soluciones eficientes y escalables que impulsaron el crecimiento y optimizaron las operaciones comerciales de diversas empresas.",
           "Asumí la responsabilidad del ciclo de vida del desarrollo de diversos proyectos, desde la conceptualización e implementación del servidor y la API, hasta el diseño de la interfaz de usuario."
         ],
@@ -55,6 +55,10 @@
       "2": {
         "TITLE": "Porfolio Web",
         "DESCRIPTION": "Porfolio Web con internacionalización y modo oscuro. Optimizado para rendimiento y SEO."
+      },
+      "3": {
+        "TITLE": "Spotify Web Player Clon",
+        "DESCRIPTION": "Clon del popular servicio de música Spotify, construido utilizando Astro, un moderno generador de sitios front-end que ofrece un rendimiento increíblemente rápido."
       }
     }
   },

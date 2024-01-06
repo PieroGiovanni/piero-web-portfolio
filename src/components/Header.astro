@@ -9,7 +9,7 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <header
-  class="flex justify-center items-center mx-auto fixed top-0 my-1 w-full xl:w-[1120px] z-10 right-0 left-0"
+  class="flex justify-center items-center bg-red-400/50 mx-auto fixed top-0 my-1 w-full max-w-[1000px] z-10 right-0 left-0"
 >
   <nav
     class="border-2 border-cyan-600 rounded-full px-1 py-1 hidden flex-row dark:bg-slate-950/50 backdrop-blur-2xl dark:border-cyan-400 bg-slate-950/5 sm:flex"
@@ -32,12 +32,11 @@ const i18n = getI18N({ currentLocale });
     >
   </nav>
 
-  <div class="flex items-center absolute right-0 gap-2 top-0">
+  <a href="/" aria-label="Home" class="absolute left-4 sm:left-1 top-0">
+    <LogoIcon class="size-9" />
+  </a>
+  <div class="flex items-center absolute sm:right-1 right-4 gap-2 top-0">
     <LanguageButton />
     <ThemeButton />
   </div>
-
-  <a href="/" aria-label="Home" class="absolute left-0 top-0">
-    <LogoIcon class="size-9" />
-  </a>
 </header>

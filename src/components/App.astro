@@ -76,7 +76,10 @@ const i18n = getI18N({ currentLocale });
       name={i18n.SECTION.ABOUT_ME.TITLE}
     >
       <UserCircleIcon slot="icon" />
-      <div class="flex flex-col gap-6 text-xl text-pretty" slot="content">
+      <div
+        class="flex flex-col gap-6 text-base lg:text-xl text-pretty"
+        slot="content"
+      >
         <p>
           {i18n.SECTION.ABOUT_ME.PARAGRAPH[1]}
         </p>
