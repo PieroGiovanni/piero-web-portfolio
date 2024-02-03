@@ -59,6 +59,10 @@
       "3": {
         "TITLE": "Spotify Web Player Clon",
         "DESCRIPTION": "Clon del popular servicio de música Spotify, construido utilizando Astro, un moderno generador de sitios front-end que ofrece un rendimiento increíblemente rápido."
+      },
+      "4": {
+        "TITLE": "Banco en Línea",
+        "DESCRIPTION": "Una aplicación bancaria en línea segura y fácil de usar. Permite a los usuarios realizar depósitos, retiros y consultar saldos. Autenticación a través de Google Firebase. Optimizado para seguridad y rendimiento."
       }
     }
   },

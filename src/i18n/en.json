@@ -60,6 +60,10 @@
       "3": {
         "TITLE": "Spotify Web Player Clone",
         "DESCRIPTION": "Clone of the popular music service Spotify, made with Astro, a modern front-end website generator that offers incredible fast performance"
+      },
+      "4": {
+        "TITLE": "Online Bank",
+        "DESCRIPTION": "A secure and easy-to-use online banking application. It allows users to make deposits, withdrawals, and check balances. Authentication is through Google Firebase. Optimized for security and performance."
       }
     }
   },

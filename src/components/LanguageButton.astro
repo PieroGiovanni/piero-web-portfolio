@@ -8,11 +8,11 @@ const { currentLocale } = Astro;
 {
   currentLocale === "en" ? (
     <a href="/" aria-label="Cambiar idioma">
-      <EnglandIcon class="size-7 rounded-full border-2 border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
+      <EnglandIcon class="size-7 rounded-full border-[3px] border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
     </a>
   ) : (
     <a href="/en" aria-label="Toggle language">
-      <SpainIcon class="size-7 rounded-full border-2 border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
+      <SpainIcon class="size-7 rounded-full border-[3px] border-black dark:border-white hover:border-cyan-600 dark:hover:border-cyan-400" />
     </a>
   )
 }

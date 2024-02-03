@@ -1,11 +1,16 @@
 ---
 import { getI18N } from "../i18n";
 import ExternalLink from "../icons/ExternalLink.astro";
+import GitHub from "../icons/GitHub.astro";
+import Link from "../icons/Link.astro";
 import ApolloIcon from "../icons/technologies/Apollo.astro";
 import AstroIcon from "../icons/technologies/AstroIcon.astro";
 import CSSIcon from "../icons/technologies/CSS.astro";
+import ExpressJsIcon from "../icons/technologies/ExpressJs.astro";
+import FirebaseIcon from "../icons/technologies/Firebase.astro";
 import GraphqlIcon from "../icons/technologies/GraphQL.astro";
 import HTMLIcon from "../icons/technologies/HTML.astro";
+import JavaScriptIcon from "../icons/technologies/JavaScript.astro";
 import NextJsIcon from "../icons/technologies/NextJs.astro";
 import NodeIcon from "../icons/technologies/NodeJs.astro";
 import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro";
@@ -14,6 +19,7 @@ import ReactIcon from "../icons/technologies/React.astro";
 import ShadcnIcon from "../icons/technologies/Shadcn.astro";
 import TailwindIcon from "../icons/technologies/Tailwind.astro";
 import TypeScriptIcon from "../icons/technologies/TypeScript.astro";
+import SocialPill from "./SocialPill.astro";
 
 interface Project {
   title: string;
@@ -46,9 +52,12 @@ enum Technologies {
   HTML = "HTML",
   CSS = "CSS",
   REACT = "REACT",
+  FIREBASE = "FIREBASE",
+  EXPRESS = "EXPRESS",
+  JAVASCRIPT = "JAVASCRIPT",
 }
 
-const Tags: { [key in Technologies]: Tag } = {
+const TAGS: { [key in Technologies]: Tag } = {
   NEXT: {
     name: "Next.js",
     icon: NextJsIcon,
@@ -101,6 +110,18 @@ const Tags: { [key in Technologies]: Tag } = {
     name: "React",
     icon: ReactIcon,
   },
+  FIREBASE: {
+    name: "Firebase",
+    icon: FirebaseIcon,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    icon: ExpressJsIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    icon: JavaScriptIcon,
+  },
 };
 
 const projects: Project[] = [
@@ -108,69 +129,98 @@ const projects: Project[] = [
     title: "Muy Guay E-commerce",
     description: i18n.SECTION.PROJECTS[1].DESCRIPTION,
     link: "https://muyguay.shop",
-    github: undefined,
+    github: "https://github.com/PieroGiovanni/muyguay-webstore",
     image: "/images/projects/muyguay.webp",
     tags: [
-      Tags.NEXT,
-      Tags.TYPESCRIPT,
-      Tags.NODE,
-      Tags.GRAPHQL,
-      Tags.TAILWIND,
-      Tags.POSTGRESQL,
-      Tags.SHADCN,
-      Tags.PRISMA,
-      Tags.APOLLO,
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.NODE,
+      TAGS.GRAPHQL,
+      TAGS.TAILWIND,
+      TAGS.POSTGRESQL,
+      TAGS.SHADCN,
+      TAGS.PRISMA,
+      TAGS.APOLLO,
     ],
   },
   {
     title: i18n.SECTION.PROJECTS[2].TITLE,
     description: i18n.SECTION.PROJECTS[2].DESCRIPTION,
     link: "https://pierogiovanni.com",
-    github: undefined,
+    github: "https://github.com/PieroGiovanni/piero-web-portfolio",
     image: "/images/projects/web-portfolio.webp",
-    tags: [Tags.ASTRO, Tags.TYPESCRIPT, Tags.HTML, Tags.CSS, Tags.TAILWIND],
+    tags: [TAGS.ASTRO, TAGS.TYPESCRIPT, TAGS.HTML, TAGS.CSS, TAGS.TAILWIND],
   },
   {
     title: i18n.SECTION.PROJECTS[3].TITLE,
     description: i18n.SECTION.PROJECTS[3].DESCRIPTION,
     link: "https://dapper-narwhal-3fc91b.netlify.app/",
-    github: undefined,
+    github: "https://github.com/PieroGiovanni/web-spotify-clone",
     image: "/images/projects/spotify-clone.webp",
     tags: [
-      Tags.ASTRO,
-      Tags.TYPESCRIPT,
-      Tags.REACT,
-      Tags.HTML,
-      Tags.CSS,
-      Tags.TAILWIND,
+      TAGS.ASTRO,
+      TAGS.TYPESCRIPT,
+      TAGS.REACT,
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.TAILWIND,
     ],
+  },
+  {
+    title: i18n.SECTION.PROJECTS[4].TITLE,
+    description: i18n.SECTION.PROJECTS[4].DESCRIPTION,
+    link: "https://test-cepl-28409.web.app/",
+    image: "/images/projects/banco.webp",
+    tags: [TAGS.REACT, TAGS.FIREBASE, TAGS.NODE, TAGS.EXPRESS, TAGS.JAVASCRIPT],
+    github: "https://github.com/PieroGiovanni/test-cepl",
   },
 ];
 ---
 
 {
-  projects.map(({ image, title, description, tags, link }) => (
-    <article>
-      <h3 class="text-2xl font-semibold dark:text-cyan-400 text-cyan-600 mb-2">
-        {title}
-      </h3>
-      <p class="md:text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-2 flex-row mb-4 justify-center flex-wrap">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full dark:bg-white/10 text-xs py-1 px-2 border dark:border-cyan-400/20 bg-black/5 border-slate-950/20`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <a href={link} class="relative group">
+  projects.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex md:flex-row flex-col gap-3 mb-4 group">
+      <div class="flex flex-col basis-1/2 gap-y-5">
+        <h3 class="text-2xl font-semibold dark:text-cyan-400 text-cyan-600">
+          {title}
+        </h3>
+        <div class="flex flex-col gap-y-4">
+          <ul class="flex gap-1 flex-row flex-wrap">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-1 rounded-full dark:bg-white/10 text-xs py-1 px-2 border dark:border-cyan-400/20 bg-black/5 border-slate-950/20`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p class="md:text-lg text-pretty">{description}</p>
+          <footer class="flex gap-x-4">
+            {github && (
+              <SocialPill href={github}>
+                <GitHub class="size-6" />
+                {currentLocale === "en" ? "Code" : "Código"}
+              </SocialPill>
+            )}
+            {link && (
+              <SocialPill href={link}>
+                <Link class="size-4" />
+                {currentLocale === "en" ? "Preview" : "Visitar"}
+              </SocialPill>
+            )}
+          </footer>
+        </div>
+      </div>
+      <a
+        href={link}
+        class="relative group basis-1/2 flex flex-col items-center col-span-6 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+      >
         <img
           loading="lazy"
-          class="rounded shadow-2xl dark:shadow-white/20 aspect-video shadow-black/20"
+          class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-125"
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
         />

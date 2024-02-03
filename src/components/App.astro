@@ -26,43 +26,45 @@ const i18n = getI18N({ currentLocale });
   <main class="px-4">
     <section
       id="home"
-      class="relative md:h-screen h-[100svh] flex flex-col items-center justify-center w-full mx-auto lg:w-[800px] pb-24"
+      class="relative md:h-screen h-[100svh] flex flex-col items-center justify-center w-full mx-auto lg:w-[1000px] pb-24"
     >
-      <div class="flex flex-row justify-center text-pretty">
-        <div class="flex flex-col gap-12">
-          <div>
-            <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold">
-              {i18n.INTRO_TITLE}
-            </h1>
-          </div>
-          <h2 class="lg:text-3xl md:text-2xl text-lg text-balance">
-            <span class="dark:text-cyan-400 text-cyan-600"
-              >{i18n.INTRO_DESCRIPTION_1}</span
-            >
-            {i18n.INTRO_DESCRIPTION_2}
-          </h2>
-          <nav class="flex gap-[14px] flex-wrap justify-center">
-            <SocialPill href="https://linkedin.com/in/piero-aparcana-alvarez">
-              <LinkedInIcon class="size-4 md:size-6" />
-              LinkedIn
-            </SocialPill>
-            <SocialPill href="https://github.com/PieroGiovanni">
-              <GitHubIcon class="size-4 md:size-6" />
-              GitHub
-            </SocialPill>
-            <SocialPill href="mailto:pierogiovanndev@gmail.com">
-              <GoogleIcon class="size-4 md:size-6" />
-              pierogiovannidev@gmail.com
-            </SocialPill>
-          </nav>
-        </div>
+      <div
+        class="flex flex-col justify-center text-pretty items-center gap-y-4 md:gap-y-6"
+      >
         <div class="shrink-0">
           <img
             alt="Draw of Piero"
-            class="lg:size-[250px] md:size-[200px] size-[150px] border-[5px] border-cyan-600 dark:border-cyan-400 rounded-full"
+            class="lg:size-[250px] md:size-[200px] size-[180px] border-[5px] border-cyan-600 dark:border-cyan-400 rounded-full"
             src="pierogiovanni.webp"
           />
         </div>
+        <!-- <div class="flex flex-col gap-4 md:gap-8 items-center"> -->
+        <div>
+          <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold text-center">
+            {i18n.INTRO_TITLE}
+          </h1>
+        </div>
+        <h2 class="lg:text-3xl md:text-2xl text-lg w-[350px] md:w-[600px]">
+          <span class="dark:text-cyan-400 text-cyan-600"
+            >{i18n.INTRO_DESCRIPTION_1}</span
+          >
+          {i18n.INTRO_DESCRIPTION_2}
+        </h2>
+        <nav class="flex gap-[14px] flex-wrap justify-center">
+          <SocialPill href="https://linkedin.com/in/piero-aparcana-alvarez">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/PieroGiovanni">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:pierogiovanndev@gmail.com">
+            <GoogleIcon class="size-4 md:size-6" />
+            pierogiovannidev@gmail.com
+          </SocialPill>
+        </nav>
+        <!-- </div> -->
       </div>
       <a
         href="#about-me"
@@ -80,7 +82,7 @@ const i18n = getI18N({ currentLocale });
     >
       <UserCircleIcon slot="icon" class="size-10 stroke-[1.5]" />
       <div
-        class="flex flex-col gap-6 text-base lg:text-xl text-pretty"
+        class="flex flex-col gap-6 text-base lg:text-xl text-pretty w-[800px] self-center"
         slot="content"
       >
         <p>
