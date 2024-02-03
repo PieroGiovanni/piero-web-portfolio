@@ -16,6 +16,7 @@ import Projects from "@/components/Projects.astro";
 
 import { getI18N } from "@/i18n/index";
 import Layout from "../layouts/Layout.astro";
+import AboutMe from "./AboutMe.astro";
 
 const { currentLocale } = Astro;
 
@@ -38,7 +39,6 @@ const i18n = getI18N({ currentLocale });
             src="pierogiovanni.webp"
           />
         </div>
-        <!-- <div class="flex flex-col gap-4 md:gap-8 items-center"> -->
         <div>
           <h1 class="lg:text-6xl text-3xl md:text-4xl font-bold text-center">
             {i18n.INTRO_TITLE}
@@ -64,7 +64,6 @@ const i18n = getI18N({ currentLocale });
             pierogiovannidev@gmail.com
           </SocialPill>
         </nav>
-        <!-- </div> -->
       </div>
       <a
         href="#about-me"
@@ -81,26 +80,10 @@ const i18n = getI18N({ currentLocale });
       name={i18n.SECTION.ABOUT_ME.TITLE}
     >
       <UserCircleIcon slot="icon" class="size-10 stroke-[1.5]" />
-      <div
-        class="flex flex-col gap-6 text-base lg:text-xl text-pretty w-[800px] self-center"
-        slot="content"
-      >
-        <p>
-          {i18n.SECTION.ABOUT_ME.PARAGRAPH[1]}
-        </p>
-        <p>
-          {i18n.SECTION.ABOUT_ME.PARAGRAPH[2]}
-        </p>
-        <p>
-          {i18n.SECTION.ABOUT_ME.PARAGRAPH[3]}
-        </p>
-        <p>
-          {i18n.SECTION.ABOUT_ME.PARAGRAPH[4]}
-        </p>
-      </div>
+      <AboutMe slot="content" />
     </CustomSection>
 
-    <CustomSection name={i18n.SECTION.TECHNOLOGY.TITLE}>
+    <CustomSection id="technologies" name={i18n.SECTION.TECHNOLOGY.TITLE}>
       <CPUIcon slot="icon" class="size-10 stroke-[1.5]" />
       <TechnologiesBox slot="content" class="mt-12" />
     </CustomSection>
@@ -108,7 +91,11 @@ const i18n = getI18N({ currentLocale });
       <BriefcaseIcon slot="icon" class="size-10 stroke-[1.5]" />
       <ExperienceTimeline slot="content" />
     </CustomSection>
-    <CustomSection id="projects" name={i18n.SECTION.PROJECTS.TITLE}>
+    <CustomSection
+      id="projects"
+      name={i18n.SECTION.PROJECTS.TITLE}
+      contentClass="md:w-[1000px]"
+    >
       <FileCodeIcon slot="icon" class="size-10 stroke-[1.5]" />
       <Projects slot="content" />
     </CustomSection>

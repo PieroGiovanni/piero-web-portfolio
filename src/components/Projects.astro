@@ -179,7 +179,7 @@ const projects: Project[] = [
 
 {
   projects.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex md:flex-row flex-col gap-3 mb-4 group">
+    <article class="flex md:flex-row flex-col gap-3 mb-20 group">
       <div class="flex flex-col basis-1/2 gap-y-5">
         <h3 class="text-2xl font-semibold dark:text-cyan-400 text-cyan-600">
           {title}
@@ -219,7 +219,6 @@ const projects: Project[] = [
         class="relative group basis-1/2 flex flex-col items-center col-span-6 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
       >
         <img
-          loading="lazy"
           class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-125"
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}

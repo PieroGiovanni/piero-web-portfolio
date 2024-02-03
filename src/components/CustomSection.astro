@@ -3,14 +3,18 @@ interface Props {
   class?: string;
   id?: string;
   name?: string;
+  contentClass?: string;
 }
 
-const { class: className, id, name } = Astro.props;
+const { class: className, id, name, contentClass } = Astro.props;
 ---
 
 <section
   id={id}
-  class=`${className} w-full mx-auto lg:w-[1000px] lg:pb-24 pb-16 flex flex-col lg:gap-16 gap-8 justify-center animate-fade`
+  class:list={[
+    "w-full mx-auto lg:w-[1000px] lg:pb-24 pb-16 flex flex-col lg:gap-16 gap-8 justify-center animate-fade",
+    className,
+  ]}
 >
   <div class="flex items-center gap-4">
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
@@ -23,7 +27,11 @@ const { class: className, id, name } = Astro.props;
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
   </div>
 
-  <slot name="content" {...Astro.props} />
+  <div
+    class:list={["self-center", contentClass || "lg:w-[800px] max-w-[800px]"]}
+  >
+    <slot name="content" {...Astro.props} />
+  </div>
 </section>
 <style>
   section {
