@@ -20,7 +20,12 @@ const { class: className, id, name, contentClass } = Astro.props;
     <hr class="grow border-2 border-cyan-600 dark:border-cyan-400" />
     <div class="flex gap-2 items-center">
       <slot name="icon" />
-      <h2 class="relative text-3xl md:text-4xl font-semibold">
+      <h2
+        class:list={[
+          "relative text-3xl md:text-4xl font-semibold sm:w-auto",
+          id === "projects" ? "w-[135px]" : "",
+        ]}
+      >
         {name}
       </h2>
     </div>
